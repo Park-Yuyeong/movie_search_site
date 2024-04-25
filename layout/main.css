@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    border: 3px double black;
+    border-radius: 10px;
+    background-color: rgb(233, 242, 245);
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px dotted black;
+}
+
+.search > label {
+    font-size: 25px;
+}
+
+.search > input {
+    margin-left: 15px;
+    min-width: 200px;
+    padding: 5px 10px;
+}
+
+.search > button {
+    margin-left: 5px;
+    padding: 5px;
+    width: 40px;
+}
+
+.card_section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.card {
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+
+    width: 300px;
+    background-color: rgb(233, 242, 245);
+    justify-self: center;
+
+    cursor: pointer;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 10px;
+}
