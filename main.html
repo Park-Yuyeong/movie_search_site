@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,18 @@
     <link rel="stylesheet" href="./main.css">
     <script src="../src/main.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>영화 평점 콜렉션</h1>
     </header>
-    <form class="search">
+    <div class="search">
         <label>영화 검색 : </label>
-        <input type="text" id="search_input" placeholder="영화 제목으로 검색해 보세요">
-        <button type="submit" id="search_btn">검색</button>
-    </form>
-    <section class="card_section">
-    </section>
-    </form>
+        <input type="text" id="search_input" placeholder="영화 제목으로 검색해 보세요" onkeypress="if(event.keyCode === 13) {find_movie()}" autofocus>
+        <button id="search_btn" onclick={find_movie()}>검색</button>
+    </div>
+    <div class="card_section">
+    </div>
 </body>
+
 </html>
