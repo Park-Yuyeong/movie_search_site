@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>영화 평점 콜렉션</title>
-    <link rel="icon" href="./image/movie_ico.png">
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js" defer></script>
-</head>
-
-<body>
+    <link rel="icon" href="./image/movie_ico.png" />
+    <link rel="stylesheet" href="./main.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>영화 평점 콜렉션</h1>
+      <h1>영화 평점 콜렉션</h1>
     </header>
-    <div class="search">
-        <label>영화 검색 : </label>
-        <input type="text" id="search_input" placeholder="영화 제목으로 검색해 보세요" onkeypress="if(event.keyCode === 13) {find_movie()}" autofocus>
-        <button id="search_btn" onclick={find_movie()}>🔍</button>
-    </div>
-    <div class="card_section">
-    </div>
-</body>
-
+    <form class="search">
+      <label>영화 검색 : </label>
+      <input
+        type="text"
+        id="search_input"
+        placeholder="영화 제목으로 검색해 보세요"
+        autofocus
+      />
+      <button id="search_btn">🔍</button>
+    </form>
+    <main class="card_section"></main>
+  </body>
 </html>
