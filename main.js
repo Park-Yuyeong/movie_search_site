@@ -37,12 +37,10 @@ const search_btn = document.getElementById('search_btn');
 const card = document.getElementsByClassName('card'); 
 
 // 검색 기능
-const find_movie = () => {
+const find_movie = () => Array.from(card).filter((item) => { // 콜백함수
   const search_input = document.getElementById('search_input').value.toLowerCase();
+  const find_title = item.getElementsByTagName('h3')[0].innerText.toLowerCase();
 
-  Array.from(card).forEach(item => { // 카드는 유사배열객체
-    let find_title = item.getElementsByTagName('h3')[0].innerText.toLowerCase();
-    if (find_title.indexOf(search_input) === -1) item.style = 'display: none';
-    else item.style = 'display: inline';
-  });
-};
+  if (find_title.indexOf(search_input) === -1) item.style = 'display: none';
+  else item.style = 'display: inline';
+});
