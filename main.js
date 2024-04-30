@@ -27,10 +27,13 @@ fetch(
           <p>Rating: ${element["vote_average"]}</p>
         </div>`;
 
-      card_section.innerHTML += temp_html;
+      card_section.insertAdjacentHTML("beforeend", temp_html); // innerHTML -> insertAdjacentHTML
     });
   })
-  .catch((err) => console.error(err));
+  .catch((err) => {
+    console.log(err);
+    alert(`${err.name}가 발생 헸습니다. 영화 데이터를 불러올 수 없습니다.`);
+  });
 
 // 카드 클릭 시 카드 이미지 alert
 // 매개변수 id를 필요로 하는 화살표 함수
@@ -41,14 +44,15 @@ const alert_id = ({ target }) => {
 };
 
 // card click event handler
+// 이벤트 위임 : 하위요소에서 발생한 이벤트를 상위요소에서 처리할 수 있도록 위임하는 것
 card_section.addEventListener("click", alert_id);
 
 const search = document.querySelector("form");
-const card = document.getElementsByClassName("card");
+const cards = document.getElementsByClassName("card");
 
 // 검색 기능
 const find_movie = (search_input) => {
-  Array.from(card).filter((item) => {
+  Array.from(cards).forEach((item) => {
     // 콜백함수
     const find_title = item.querySelector("h3").innerText.toLowerCase();
 
