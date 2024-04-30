@@ -42,7 +42,7 @@ header {
   width: 35px;
 }
 
-.card_section {
+.cardSection {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   justify-content: center;
