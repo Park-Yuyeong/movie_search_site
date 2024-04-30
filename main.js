@@ -38,7 +38,6 @@ const movies = await fetchData();
 movies.forEach((element) => drawCard(element));
 
 // 카드 클릭 시 카드 이미지 alert
-// 매개변수 id를 필요로 하는 화살표 함수
 const alertId = ({ target }) => {
   if (target === cardSection) return null;
   if (target.matches(".card")) alert(`영화 id: ${target.id}`);
